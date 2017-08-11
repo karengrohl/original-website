@@ -41,9 +41,26 @@ body > .container {
 }
 
 .main-content-wrapper {
+    padding-top: 70px;
     padding-bottom: 60px;
 }
 
 .content-section {
     margin-bottom: 50px;
 }
+
+.left-menu li{
+    padding-bottom: 11px;
+}
+
+.left-menu li a {
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .product-row-wrapper {
+        min-width: 75%;
+    }
+}
+
