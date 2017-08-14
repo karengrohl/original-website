@@ -64,3 +64,13 @@ body > .container {
     }
 }
 
+@media (min-width: 992px) {
+    .top-line-header {
+        margin-top: 0;
+    }
+}
+
+.first-content-section {
+    padding-top: 50px;
+}
+
