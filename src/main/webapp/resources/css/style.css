@@ -46,7 +46,7 @@ body > .container {
 }
 
 .content-section {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .left-menu li{
@@ -74,3 +74,13 @@ body > .container {
     padding-top: 50px;
 }
 
+.wrap-flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.store-page-news-item {
+    padding: 15px 15px;
+}
