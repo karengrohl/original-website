@@ -17,11 +17,12 @@
     <script src="resources/libs/js/angular-ui-router/angular-ui-router.min.js"></script>
 
     <script src="resources/js/app.js"></script>
+    <script src="resources/js/directives/lastUpdates.directive.js"></script>
 
 </head>
 <body ng-app="original-store">
     <div ui-view="header"></div>
-    <div ui-view="main"></div>
+    <div ui-view="main" class="container main-content-wrapper"></div>
     <div ui-view="footer"></div>
 </body>
 </html>

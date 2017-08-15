@@ -5,28 +5,49 @@ var application = angular.module(
 
 application.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("");
+    var templateFolder = "templates";
     var root = {
         abstract: true,
         url: "",
         views: {
             "header@": {
-                templateUrl: "templates/header.html"
+                templateUrl: templateFolder + "/header.html"
             },
             "footer@": {
-                templateUrl: "templates/footer.html"
+                templateUrl: templateFolder + "/footer.html"
             }
         }
     };
 
-    var mainPage = {
+    var main = {
         url: "",
         views: {
             "main@": {
-                templateUrl: "templates/main.html"
+                templateUrl: templateFolder + "/main.html"
+            }
+        }
+    };
+
+    var stores = {
+        url: "/stores",
+        views: {
+            "main@": {
+                templateUrl: templateFolder + "/stores.html"
+            }
+        }
+    };
+
+    var store = {
+        url: "/stores/:id",
+        views: {
+            "main@": {
+                templateUrl: templateFolder + "/store.html"
             }
         }
     };
 
     $stateProvider.state("root", root);
-    $stateProvider.state("root.main", mainPage);
+    $stateProvider.state("root.main", main);
+    $stateProvider.state("root.stores", stores);
+    $stateProvider.state("root.store", store);
 });
