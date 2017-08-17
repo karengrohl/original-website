@@ -4,7 +4,7 @@
     function lastUpdates() {
         return {
             restrict: "E",
-            templateUrl: "templates/lastUpdates.html"
+            templateUrl: "templates/elements/lastUpdates.html"
         };
     }
 })();

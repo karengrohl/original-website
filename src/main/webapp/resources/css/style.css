@@ -13,7 +13,7 @@ html {
 }
 body > .container {
 
-    padding-top: 80px;
+    padding-top: 110px;
 }
 
 .product-card-row {
@@ -70,10 +70,6 @@ body > .container {
     }
 }
 
-.first-content-section {
-    padding-top: 50px;
-}
-
 .wrap-flex-container {
     display: -webkit-flex;
     display: flex;
@@ -84,3 +80,7 @@ body > .container {
 .store-page-news-item {
     padding: 15px 15px;
 }
+
+/*.catalog-item-card {*/
+    /*padding: 10px;*/
+/*}*/

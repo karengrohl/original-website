@@ -23,7 +23,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/main.html"
+                templateUrl: templateFolder + "/main.html",
+                controller: "main.controller as mc"
             }
         }
     };
@@ -41,7 +42,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "/stores/:id",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/store.html"
+                templateUrl: templateFolder + "/store.html",
+                controller: "main.controller as mc"
             }
         }
     };

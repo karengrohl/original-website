@@ -1,33 +1,20 @@
 <div class="">
+
+    <div class="content-section">
+        <search-field></search-field>
+    </div>
+
     <!--region main carousel-->
     <div id="main-carousel" class="content-section">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <!--<ol class="carousel-indicators">-->
-            <!--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
-            <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
-            <!--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
-            <!--</ol>-->
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src="http://via.placeholder.com/1330x550" alt="...">
-                    <div class="carousel-caption">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci asperiores eaque
-                        eveniet
-                        illum iusto nesciunt nostrum perspiciatis porro, quam recusandae reiciendis saepe totam vel.
-                        Accusamus dignissimos dolore odio.
-                    </div>
                 </div>
                 <div class="item">
                     <img src="http://via.placeholder.com/1330x550" alt="...">
-                    <div class="carousel-caption">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto natus, voluptatibus!
-                        Animi,
-                        asperiores autem commodi consequatur debitis distinctio illo, libero nihil numquam obcaecati
-                        odio, quaerat similique suscipit vel voluptate voluptatibus.
-                    </div>
                 </div>
             </div>
 
@@ -44,12 +31,6 @@
     </div>
     <!--endregion-->
 
-    <!--<div class="container content-section">-->
-    <!--<div class="has-feedback form-group">-->
-    <!--<input placeholder="Поиск..." class="form-control input-lg" id="search-input">-->
-    <!--<span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>-->
-    <!--</div>-->
-    <!--</div>-->
 
     <div class="content-section">
         <last-updates></last-updates>
@@ -94,375 +75,31 @@
             </div>
             <div class="col-md-10 col-sm-12">
                 <div id="main-page-catalog" class="content-section">
-                    <div class="category-carousel">
-                        <h3>Футболки</h3>
-                        <div>
-                            <ul class="list-inline product-card-row">
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-
-                            </ul>
+                    <div class="wrap-flex-container row">
+                        <div class="col-xs-6 col-sm-3" ng-repeat="a in mc.getRange(20)">
+                            <catalog-item-card></catalog-item-card>
                         </div>
                     </div>
-                    <div class="category-carousel">
-                        <h3>Футболки</h3>
-                        <div>
-                            <ul class="list-inline product-card-row">
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="category-carousel">
-                        <h3>Футболки</h3>
-                        <div>
-                            <ul class="list-inline product-card-row">
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="category-carousel">
-                        <h3>Футболки</h3>
-                        <div>
-                            <ul class="list-inline product-card-row">
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="category-carousel">
-                        <h3>Футболки</h3>
-                        <div>
-                            <ul class="list-inline product-card-row">
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                                <li class="product-card-in-list">
-                                    <div>
-                                        <a href="#">
-                                            <img src="http://via.placeholder.com/200x300" alt="..."
-                                                 class="img-thumbnail img-responsive">
-                                        </a>
-                                        <h4 class="store-name">Название магазина</h4>
-                                        <p class="product-card-price">20.00 р.</p>
-                                        <p class="product-card-discount-label">Скидка</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <nav aria-label="Page navigation">
+                        <div class="text-center">
+                            <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul></div>
+                    </nav>
                 </div>
             </div>
         </div>
