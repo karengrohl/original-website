@@ -48,8 +48,19 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var basket = {
+        url: "/basket",
+        views: {
+            "main@": {
+                templateUrl: templateFolder + "/basket.html",
+                controller: "main.controller as mc"
+            }
+        }
+    };
+
     $stateProvider.state("root", root);
     $stateProvider.state("root.main", main);
     $stateProvider.state("root.stores", stores);
     $stateProvider.state("root.store", store);
+    $stateProvider.state("root.basket", basket);
 });

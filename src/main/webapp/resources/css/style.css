@@ -62,6 +62,10 @@ body > .container {
     .product-row-wrapper {
         min-width: 75%;
     }
+
+    .side-menu {
+        padding-right: 30px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -84,3 +88,16 @@ body > .container {
 /*.catalog-item-card {*/
     /*padding: 10px;*/
 /*}*/
+.no-margin-top {
+    margin-top: 0;
+}
+
+.catalog-item-card {
+    padding: 15px;
+}
+
+.row-extended {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
