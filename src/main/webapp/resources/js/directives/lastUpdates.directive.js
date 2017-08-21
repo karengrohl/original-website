@@ -4,7 +4,8 @@
     function lastUpdates() {
         return {
             restrict: "E",
-            templateUrl: "templates/elements/lastUpdates.html"
+            templateUrl: "templates/elements/lastUpdates.html",
+            controller: "main.controller as mc"
         };
     }
 })();

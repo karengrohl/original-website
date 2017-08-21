@@ -1,20 +1,5 @@
 <div class="wrap-flex-container row">
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1400x1300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1400x1300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1300x1300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1400x300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1800x1300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
-    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4"><img src="http://via.placeholder.com/1400x1300"
-                                                                      alt="..."
-                                                                      class="img-responsive"></div>
+    <div class="store-page-news-item col-xs-12 col-sm-4 col-md-4" ng-repeat="a in mc.getRange(6)">
+        <img src="files/1400x1300.png" class="img-responsive">
+    </div>
 </div>

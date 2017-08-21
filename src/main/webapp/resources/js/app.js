@@ -11,7 +11,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "",
         views: {
             "header@": {
-                templateUrl: templateFolder + "/header.html"
+                templateUrl: templateFolder + "/header.html",
+                controller: "header.controller as hc"
             },
             "footer@": {
                 templateUrl: templateFolder + "/footer.html"
@@ -49,10 +50,10 @@ application.config(function ($stateProvider, $urlRouterProvider) {
     };
 
     var basket = {
-        url: "/basket",
+        url: "/cart",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/basket.html",
+                templateUrl: templateFolder + "/cart.html",
                 controller: "main.controller as mc"
             }
         }
@@ -62,5 +63,5 @@ application.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state("root.main", main);
     $stateProvider.state("root.stores", stores);
     $stateProvider.state("root.store", store);
-    $stateProvider.state("root.basket", basket);
+    $stateProvider.state("root.cart", basket);
 });
