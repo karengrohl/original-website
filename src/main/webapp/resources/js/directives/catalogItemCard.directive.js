@@ -13,10 +13,12 @@
 
                 cc.addToCart = function (id) {
                     $scope.delete = !$scope.delete;
+                    $scope.$root.cartCount++;
                 };
 
                 cc.removeFromCart = function (id) {
                     $scope.delete = !$scope.delete;
+                    $scope.$root.cartCount--;
                 };
             },
             controllerAs: "ic"

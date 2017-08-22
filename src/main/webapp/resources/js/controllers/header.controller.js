@@ -1,6 +1,6 @@
 (function () {
-    function headerController($scope) {
-        $scope.cartCount = 10.0;
+    function headerController($rootScope) {
+        $rootScope.cartCount = 0.0;
     }
 
     angular.module("original-store").controller("header.controller", headerController);
