@@ -5,6 +5,22 @@
     </div>
 
     <div class="content-section">
+        <div>
+            <div>
+                <div uib-carousel active="0" interval="mc.carousel.interval">
+                    <div uib-slide ng-repeat="slide in mc.carousel.slides track by slide.id" index="slide.id">
+                        <div class="wrap-flex-container row row-extended">
+                            <div class="col-xs-6 col-sm-3" ng-repeat="a in mc.getRange(4)">
+                                <catalog-item-card></catalog-item-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
         <last-updates></last-updates>
     </div>
 

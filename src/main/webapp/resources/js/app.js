@@ -1,6 +1,10 @@
 var application = angular.module(
     "original-store",
-    ["ui.router"]
+    [
+        "ui.router",
+        "ui.bootstrap",
+        'ngAnimate'
+    ]
 );
 
 application.config(function ($stateProvider, $urlRouterProvider) {
