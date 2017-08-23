@@ -101,3 +101,20 @@ body > .container {
     margin-right: -30px;
 }
 
+.carousel-control {
+    width: 5%;
+    color: gray;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background: none no-repeat;
+}
+
+.slide-content-block {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.carousel-indicators {
+    display: none;
+}
