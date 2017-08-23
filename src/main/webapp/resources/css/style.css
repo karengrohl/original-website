@@ -103,7 +103,11 @@ body > .container {
 
 .carousel-control {
     width: 5%;
-    color: gray;
+    color: #337ab7;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+    color: #23527c;;
 }
 
 .carousel-control.left, .carousel-control.right {
