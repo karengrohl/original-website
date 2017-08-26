@@ -58,6 +58,10 @@ body > .container {
     cursor: pointer;
 }
 
+a[ng-click] {
+    cursor: pointer;
+}
+
 @media (min-width: 768px) {
     .product-row-wrapper {
         min-width: 75%;
@@ -122,4 +126,5 @@ body > .container {
 .carousel-indicators {
     display: none;
 }
+
 

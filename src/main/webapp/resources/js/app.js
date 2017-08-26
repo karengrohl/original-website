@@ -9,17 +9,17 @@ var application = angular.module(
 
 application.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("");
-    var templateFolder = "templates";
+    var TEMPLATE_FOLDER = "templates";
     var root = {
         abstract: true,
         url: "",
         views: {
             "header@": {
-                templateUrl: templateFolder + "/header.html",
+                templateUrl: TEMPLATE_FOLDER + "/header.html",
                 controller: "header.controller as hc"
             },
             "footer@": {
-                templateUrl: templateFolder + "/footer.html"
+                templateUrl: TEMPLATE_FOLDER + "/footer.html"
             }
         }
     };
@@ -29,7 +29,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/main.html",
+                templateUrl: TEMPLATE_FOLDER + "/main.html",
                 controller: MAIN_CONTROLLER
             }
         }
@@ -39,7 +39,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "/stores",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/stores.html",
+                templateUrl: TEMPLATE_FOLDER + "/stores.html",
                 controller: MAIN_CONTROLLER
             }
         }
@@ -49,7 +49,17 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "/stores/:id",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/store.html",
+                templateUrl: TEMPLATE_FOLDER + "/store.html",
+                controller: MAIN_CONTROLLER
+            }
+        }
+    };
+
+    var storeWithSale = {
+        url: "/stores/:id/:saleId",
+        views: {
+            "main@": {
+                templateUrl: TEMPLATE_FOLDER + "/store.html",
                 controller: MAIN_CONTROLLER
             }
         }
@@ -59,7 +69,17 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "/cart",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/cart.html",
+                templateUrl: TEMPLATE_FOLDER + "/cart.html",
+                controller: MAIN_CONTROLLER
+            }
+        }
+    };
+
+    var news = {
+        url: "/news",
+        views: {
+            "main@": {
+                templateUrl: TEMPLATE_FOLDER + "/news.html",
                 controller: MAIN_CONTROLLER
             }
         }
@@ -70,4 +90,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state("root.stores", stores);
     $stateProvider.state("root.store", store);
     $stateProvider.state("root.cart", basket);
+    $stateProvider.state("root.news", news);
+    $stateProvider.state("root.storeWithSale", storeWithSale);
 });
