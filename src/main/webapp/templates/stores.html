@@ -1,22 +1,46 @@
 <div>
+
     <div class="content-section">
-        <div class="row">
-            <div class="col-md-8">
-                <div id="map" style="width: 100%; height: 80%"></div>
+        <div id="map" style="width: 100%; height: 50%; min-height: 30%"></div>
+    </div>
+
+    <div class="content-section">
+        <div>
+
+            <div class="wrap-flex-container row row-extended">
+                <div class="col-sm-6" ng-repeat="a in mc.getRange(5)">
+                    <div id="store1" class="catalog-item-card">
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="files/500x500.png" alt="..."
+                                         class="img-responsive img-circle">
+                                </div>
+                                <div class="col-xs-9">
+                                    <a ui-sref="root.store({id: 1})"><h3 class="top-line-header">"Название Магазина"</h3></a>
+                                    <div>
+                                        <p>ПН-СБ: 9:00 — 19:00<br>
+                                            ВС: 9:00 — 15:00</p>
+                                    </div>
+                                    <div>
+                                        <p><a href="#">пр-т Димитрова, 70а ТЦ "Поло"</a></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="store1" class="col-md-4">
-                <a ui-sref="root.store({id: 1})">Магазин</a>
-            </div>
-            <div id="store2" class="col-md-4">
-                <a ui-sref="root.store({id: 1})">Магазин</a>
-            </div>
+
+
+
         </div>
     </div>
     <script type="text/javascript">
         ymaps.ready(init);
         var myMap,
-            myPlacemark,
-            myPlacemark2;
+            myPlacemark;
 
         function init() {
             myMap = new ymaps.Map("map", {
@@ -27,34 +51,23 @@
 
             myPlacemark = new ymaps.Placemark([53.893024, 30.333100], {
                 hintContent: 'Магазин',
-                balloonContentHeader: 'Магазин',
+                balloonContentHeader: 'Название магазина',
                 balloonContentBody: "Информация о магазине",
                 storeId: 1
 
             });
 
-            myPlacemark2 = new ymaps.Placemark([53.90, 30.34], {
-                hintContent: 'Магазин',
-                balloonContentHeader: 'Магазин',
-                balloonContentBody: "Информация о магазине",
-                storeId: 2
 
-            });
 
             myPlacemark.events.add('click', function (e) {
                 var target = e.get("target");
                 console.log(target);
-                $("#store" + target.properties._data.storeId).addClass("bg-success");
+                $("#store" + target.properties._data.storeId).addClass("panel-info");
             });
 
-            myPlacemark2.events.add('click', function (e) {
-                var target = e.get("target");
-                console.log(target);
-                $("#store" + target.properties._data.storeId).addClass("bg-success");
-            });
+
 
             myMap.geoObjects.add(myPlacemark);
-            myMap.geoObjects.add(myPlacemark2);
         }
     </script>
 </div>

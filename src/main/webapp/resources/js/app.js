@@ -24,12 +24,13 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var MAIN_CONTROLLER = "main.controller as mc";
     var main = {
         url: "",
         views: {
             "main@": {
                 templateUrl: templateFolder + "/main.html",
-                controller: "main.controller as mc"
+                controller: MAIN_CONTROLLER
             }
         }
     };
@@ -38,7 +39,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         url: "/stores",
         views: {
             "main@": {
-                templateUrl: templateFolder + "/stores.html"
+                templateUrl: templateFolder + "/stores.html",
+                controller: MAIN_CONTROLLER
             }
         }
     };
@@ -48,7 +50,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: templateFolder + "/store.html",
-                controller: "main.controller as mc"
+                controller: MAIN_CONTROLLER
             }
         }
     };
@@ -58,7 +60,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: templateFolder + "/cart.html",
-                controller: "main.controller as mc"
+                controller: MAIN_CONTROLLER
             }
         }
     };
