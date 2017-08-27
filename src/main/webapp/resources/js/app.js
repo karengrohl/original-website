@@ -55,8 +55,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-    var storeWithSale = {
-        url: "/stores/:id/:saleId",
+    var sale = {
+        url: "/stores/:id/sale/:saleId",
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/store.html",
@@ -85,11 +85,24 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-    $stateProvider.state("root", root);
-    $stateProvider.state("root.main", main);
-    $stateProvider.state("root.stores", stores);
-    $stateProvider.state("root.store", store);
-    $stateProvider.state("root.cart", basket);
-    $stateProvider.state("root.news", news);
-    $stateProvider.state("root.storeWithSale", storeWithSale);
+    var item = {
+        url: "/stores/:storeId/item/:itemId",
+        views: {
+            "main@": {
+                templateUrl: TEMPLATE_FOLDER + "/item.html",
+                controller: MAIN_CONTROLLER
+            }
+        }
+    };
+
+    $stateProvider
+        .state("root", root)
+        .state("root.main", main)
+        .state("root.stores", stores)
+        .state("root.store", store)
+        .state("root.cart", basket)
+        .state("root.news", news)
+        //maybe make root.store.sale and root.store.item
+        .state("root.sale", sale)
+        .state("root.item", item);
 });

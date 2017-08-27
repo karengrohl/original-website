@@ -107,11 +107,11 @@ a[ng-click] {
 
 .carousel-control {
     width: 5%;
-    color: #337ab7;
+    color: #777777;
 }
 
 .carousel-control:hover, .carousel-control:focus {
-    color: #23527c;;
+    color: #777777;
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -127,4 +127,35 @@ a[ng-click] {
     display: none;
 }
 
+.side-photos ul {
 
+}
+
+.item-side-photo, .item-price {
+    padding-bottom: 15px;
+}
+
+.button-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.item-properties li {
+    margin-bottom: 10px;
+}
+
+
+
+.main-item-photo {
+    padding-left: 0;
+}
+
+.focus-text {
+    font-weight: bold;
+    color: cornflowerblue;
+}
+
+.breadcrumb {
+    padding-left: 0;
+    background: none;
+}

@@ -1,0 +1,65 @@
+<div class="">
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+    <div class="content-section">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="item-photo-booth row">
+                    <div class="side-photos col-xs-3">
+                        <ul class="list-unstyled">
+                            <li class="item-side-photo" ng-repeat="a in mc.getRange(3)">
+                                <img src="files/800x1300.png" alt="" class="img-responsive">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-item-photo col-xs-9">
+                        <img src="files/800x1300.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <h2 class="top-line-header main-header">Название товара и его тип</h2>
+                <h1 class="focus-text item-price">220 р. 90 к.</h1>
+
+                <ul class="list-unstyled item-properties">
+                    <li><h4>Размер: <strong>M</strong></h4></li>
+                    <li>
+                        <small><span class="text-muted">Цвет:</span>синий</small>
+                    </li>
+                    <li>
+                        <small><span class="text-muted">Состав:</span> хлопок 98%,эластан 2%</small>
+                    </li>
+                    <li>
+                        <small><span class="text-muted">Бренд:</span> <a href="#" title="Все товары бренда">Название
+                            бренда</a></small>
+                    </li>
+
+                </ul>
+                <p class="button-container">
+                    <a href="#" title="Все товары бренда">Название
+                        Магазина</a><br>
+
+                    <small><a href="#">пр-т Димитрова, 70а ТЦ "Поло"
+                    </a></small>
+                </p>
+                <div class="button-container">
+                    <button type="button" class="btn btn-primary btn-lg button-container"><span
+                            class="glyphicon glyphicon-shopping-cart"></span> Добавить в корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="content-section">
+        <h5>Похожие товары</h5>
+        <div class="wrap-flex-container row row-extended">
+            <div class="col-xs-6 col-sm-3 col-md-2" ng-repeat="a in mc.getRange(6)">
+                <catalog-item-card></catalog-item-card>
+            </div>
+        </div>
+    </div>
+</div>
