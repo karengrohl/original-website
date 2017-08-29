@@ -75,6 +75,10 @@ a[ng-click] {
     .top-line-header {
         margin-top: 0;
     }
+
+    .navbar-fixed-top .navbar-collapse {
+        padding-right: 15px;
+    }
 }
 
 .wrap-flex-container {
