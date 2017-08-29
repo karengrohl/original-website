@@ -95,8 +95,20 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var login = {
+        url: "/login",
+        views: {
+            "main@": {
+                templateUrl: TEMPLATE_FOLDER + "/login.html",
+                controller: MAIN_CONTROLLER
+            }
+        }
+    };
+
+
+    var ROOT = "root";
     $stateProvider
-        .state("root", root)
+        .state(ROOT, root)
         .state("root.main", main)
         .state("root.stores", stores)
         .state("root.store", store)
@@ -104,5 +116,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         .state("root.news", news)
         //maybe make root.store.sale and root.store.item
         .state("root.sale", sale)
-        .state("root.item", item);
+        .state("root.item", item)
+        .state("root.login", login);
 });

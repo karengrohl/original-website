@@ -7,7 +7,7 @@
                      class="img-responsive img-circle">
             </div>
             <div class="col-md-10">
-                <h1 class="top-line-header ">"Название Магазина"</h1>
+                <h1 class="top-line-header ">Название Магазина</h1>
                 <div>
                     <p>ПН-СБ: 9:00 — 19:00<br>
                         ВС: 9:00 — 15:00</p>
@@ -15,7 +15,20 @@
                 <div>
                     <p><a href="#">пр-т Димитрова, 70а ТЦ "Поло"</a></p>
                 </div>
+                <div class="vote-buttons">
+                    <p>
+                        <button type="button" class="btn btn-success">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            123
+                        </button>
 
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-thumbs-down"></span>
+                            123
+                        </button>
+
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -26,8 +39,10 @@
 
 
     <div class="content-section">
-<div class="row">       <div class="col-md-offset-2 col-md-10"> <h2 ng-if="mc.saleId">Акция "Название акции"</h2></div>
-</div>        <div class="row">
+        <div class="row">
+            <div class="col-md-offset-2 col-md-10"><h2 ng-if="mc.saleId">Акция "Название акции"</h2></div>
+        </div>
+        <div class="row">
             <div class="col-md-2 hidden-sm hidden-xs">
                 <div class="pull-right">
                     <h3></h3>
@@ -83,7 +98,8 @@
                                         <span aria-hidden="true">&raquo;</span>
                                     </a>
                                 </li>
-                            </ul></div>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>

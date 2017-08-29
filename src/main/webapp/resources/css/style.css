@@ -23,7 +23,6 @@ body > .container {
 
 #navbar-logotype {
     color: #c4bc12;
-    text-decoration: underline;
     font-family: Felixti, serif;
     letter-spacing: 6px;
 }
@@ -98,6 +97,11 @@ a[ng-click] {
 
 .catalog-item-card {
     padding: 15px;
+}
+
+.vote-buttons {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .row-extended {
