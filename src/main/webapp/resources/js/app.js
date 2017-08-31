@@ -9,7 +9,10 @@ var application = angular.module(
 
 application.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("");
+
     var TEMPLATE_FOLDER = "templates";
+    var ADMIN_FOLDER = "/admin";
+
     var root = {
         abstract: true,
         url: "",
@@ -90,19 +93,21 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/item.html",
-                controller: MAIN_CONTROLLER
+                controller: "item.controller as mc"
             }
         }
     };
 
-    var login = {
-        url: "/login",
+    var admin = {
+
+        url: "/admin",
         views: {
             "main@": {
-                templateUrl: TEMPLATE_FOLDER + "/login.html",
+                templateUrl: TEMPLATE_FOLDER + ADMIN_FOLDER + "/admin.html",
                 controller: MAIN_CONTROLLER
             }
         }
+
     };
 
 
@@ -117,5 +122,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         //maybe make root.store.sale and root.store.item
         .state("root.sale", sale)
         .state("root.item", item)
-        .state("root.login", login);
+        .state("root.admin", admin);
+
 });
