@@ -167,3 +167,40 @@ a[ng-click] {
     padding-left: 0;
     background: none;
 }
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    margin: 10px;
+}
+
+.vote-buttons {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.vote-button-group {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #777777;
+}
+
+.vote-button-group:hover {
+    color: inherit;
+}
+
+.vote-button-group, .vote-button-group div{
+    display: inline-block;
+}
+

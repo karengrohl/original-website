@@ -1,12 +1,19 @@
 <div class="">
 
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+
+    <!--TODO check h1 margin between breadcrumb-->
     <div class="content-section">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 hidden-xs hidden-sm">
                 <img src="files/500x500.png" alt="..."
                      class="img-responsive img-circle">
             </div>
-            <div class="col-md-10">
+            <div class="col-md-10 col-sm-12">
                 <h1 class="top-line-header ">Название Магазина</h1>
                 <div>
                     <p>ПН-СБ: 9:00 — 19:00<br>
@@ -16,18 +23,14 @@
                     <p><a href="#">пр-т Димитрова, 70а ТЦ "Поло"</a></p>
                 </div>
                 <div class="vote-buttons">
-                    <p>
-                        <button type="button" class="btn btn-success">
-                            <span class="glyphicon glyphicon-thumbs-up"></span>
-                            123
-                        </button>
-
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-thumbs-down"></span>
-                            123
-                        </button>
-
-                    </p>
+                    <div class="vote-button-group">
+                        <h4><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                        <span>123</span></h4>
+                    </div>
+                    <div class="vote-button-group">
+                        <h4><i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                        <span>123</span></h4>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +43,8 @@
 
     <div class="content-section">
         <div class="row">
-            <div class="col-md-offset-2 col-md-10"><h2 ng-if="mc.saleId">Акция "Название акции"</h2></div>
+            <div class="col-md-offset-2 col-md-10"><h2 ng-if="mc.saleId">Акция "Название акции"</h2>
+            <p>Fsdfasdf sadfasfsad asdfsadf sadfsadf</p></div>
         </div>
         <div class="row">
             <div class="col-md-2 hidden-sm hidden-xs">

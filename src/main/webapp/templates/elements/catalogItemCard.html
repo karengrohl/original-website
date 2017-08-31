@@ -7,6 +7,5 @@
     <p class="product-card-discount-label">Размер</p>
     <p ng-if="!delete"><a ng-click="ic.addToCart(1)"><span class="glyphicon glyphicon-shopping-cart"></span> В
         корзину</a></p>
-    <p ng-if="delete"><a class="text-danger" ng-click="ic.removeFromCart(1)"><span
-            class="glyphicon glyphicon glyphicon-remove"></span> Удалить из корзины</a></p>
+    <p ng-if="delete"><a class="text-success" ui-sref="root.cart">Перейти в корзину</a></p>
 </div>
