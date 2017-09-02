@@ -1,8 +1,8 @@
 (function () {
 
-    angular.module("original-store").controller("mapModal.controller", mapModal);
+    angular.module("original-store").controller("mapModal.controller", controller);
 
-    function mapModal() {
+    function controller() {
         var mc = this;
 
     }

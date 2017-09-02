@@ -23,27 +23,27 @@
                     <p><a href="#">пр-т Димитрова, 70а ТЦ "Поло"</a></p>
                 </div>
                 <div class="vote-buttons">
-                    <div class="vote-button-group">
+                    <div class="vote-button-group" ng-click="sc.like()">
                         <h4><i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                        <span>123</span></h4>
+                        <span class="vote-number">123</span></h4>
                     </div>
-                    <div class="vote-button-group">
+                    <div class="vote-button-group" ng-click="sc.dislike()">
                         <h4><i class="fa fa-thumbs-down" aria-hidden="true"></i>
-                        <span>123</span></h4>
+                        <span class="vote-number">123</span></h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="content-section" ng-if="!mc.saleId">
+    <div class="content-section" ng-if="!sc.saleId">
         <last-updates></last-updates>
     </div>
 
 
     <div class="content-section">
-        <div class="row">
-            <div class="col-md-offset-2 col-md-10"><h2 ng-if="mc.saleId">Акция "Название акции"</h2>
+        <div class="row" ng-if="sc.saleId">
+            <div class="col-md-offset-2 col-md-10"><h2>Акция "Название акции"</h2>
             <p>Fsdfasdf sadfasfsad asdfsadf sadfsadf</p></div>
         </div>
         <div class="row">
@@ -80,7 +80,7 @@
             <div class="col-md-10 col-sm-12">
                 <div id="main-page-catalog">
                     <div class="wrap-flex-container row row-extended">
-                        <div class="col-xs-6 col-sm-3" ng-repeat="a in mc.getRange(10)">
+                        <div class="col-xs-6 col-sm-3" ng-repeat="a in sc.getRange(10)">
                             <catalog-item-card></catalog-item-card>
                         </div>
                     </div>

@@ -71,10 +71,12 @@ a[ng-click] {
     }
 }
 
+.top-line-header {
+    margin-top: 0;
+}
+
 @media (min-width: 992px) {
-    .top-line-header {
-        margin-top: 0;
-    }
+
 
     .navbar-fixed-top .navbar-collapse {
         padding-right: 15px;
@@ -194,6 +196,7 @@ a[ng-click] {
     padding-left: 10px;
     padding-right: 10px;
     color: #777777;
+    cursor: pointer;
 }
 
 .vote-button-group:hover {
@@ -204,3 +207,6 @@ a[ng-click] {
     display: inline-block;
 }
 
+.vote-number {
+    color: #777777; !important;
+}

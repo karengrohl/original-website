@@ -1,8 +1,8 @@
 (function () {
 
-    angular.module("original-store").controller("item.controller", itemController);
+    angular.module("original-store").controller("item.controller", controller);
 
-    function itemController($stateParams, $uibModal) {
+    function controller($stateParams, $uibModal) {
         var mc = this;
 
         console.log($stateParams);

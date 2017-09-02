@@ -21,7 +21,11 @@
 
         mc.getRange = function (n) {
             return _.range(0, n);
-        }
+        };
+
+        mc.f = function () {
+            alert("Done")
+        };
 
     }
 

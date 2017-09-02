@@ -53,7 +53,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/store.html",
-                controller: MAIN_CONTROLLER
+                controller: "store.controller as sc"
             }
         }
     };
