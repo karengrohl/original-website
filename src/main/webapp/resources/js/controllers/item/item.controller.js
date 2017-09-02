@@ -3,17 +3,33 @@
     angular.module("original-store").controller("item.controller", controller);
 
     function controller($stateParams, $uibModal) {
-        var mc = this;
+        var ctrl = this;
 
         console.log($stateParams);
 
-        mc.store = {};
+        ctrl.store = {
+            name: "Название магазина",
+            geoObject: {
+                geometry: {
+                    type: "Point",
+                    coordinates: [30.33, 53.89]
+                },
+                // Свойства.
+                properties: {
+                    // Контент метки.
+                    balloonContentHeader: "Название магазина",
+                    balloonContentBody: "Содержимое балуна метки",
+                    balloonContentFooter: "Подвал",
+                    hintContent: 'Название магазина'
+                }
+            }
+        };
 
-        mc.getRange = function (n) {
+        ctrl.getRange = function (n) {
             return _.range(0, n);
         };
 
-        mc.openMap = function () {
+        ctrl.openMap = function () {
             $uibModal.open({
                 animation: true,
                 templateUrl: "templates/elements/item/mapModal.template.html",
@@ -21,7 +37,7 @@
                 controllerAs: "mc",
                 resolve: {
                     store: function () {
-                        return mc.store;
+                        return ctrl.store;
                     }
                 }
             });

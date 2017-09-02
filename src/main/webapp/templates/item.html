@@ -10,7 +10,7 @@
                 <div class="item-photo-booth row">
                     <div class="side-photos col-xs-3">
                         <ul class="list-unstyled">
-                            <li class="item-side-photo" ng-repeat="a in mc.getRange(3)">
+                            <li class="item-side-photo" ng-repeat="a in ic.getRange(3)">
                                 <img src="files/800x1300.png" alt="" class="img-responsive">
                             </li>
                         </ul>
@@ -27,24 +27,29 @@
                 <ul class="list-unstyled item-properties">
                     <li><h4>Размер: <strong>M</strong></h4></li>
                     <li>
-                        <small><span class="text-muted">Цвет:</span>синий</small>
+                        <small><span class="text-muted">Цвет: </span>синий</small>
                     </li>
                     <li>
-                        <small><span class="text-muted">Состав:</span> хлопок 98%,эластан 2%</small>
+                        <small><span class="text-muted">Состав: </span>хлопок 98%,эластан 2%</small>
                     </li>
                     <li>
-                        <small><span class="text-muted">Бренд:</span> <a href="#" title="Все товары бренда">Название
+                        <small><span class="text-muted">Бренд: </span><a href="#" title="Все товары бренда">Название
                             бренда</a></small>
                     </li>
 
                 </ul>
-                <p class="button-container">
-                    <a href="#" title="Все товары бренда">Название
-                        Магазина</a><br>
+                <div>
+                    <p class="button-container">
 
-                    <small><a href="#">пр-т Димитрова, 70а ТЦ "Поло"
-                    </a></small>
-                </p>
+                        <a href="#" title="Все товары бренда">{{ic.store.name}}</a><br>
+
+                    </p>
+                    <ya-map class="item-location-map" ya-center="ic.store.geoObject.geometry.coordinates" ya-zoom="11"
+                            ya-controls="zoomControl fullscreenControl">
+                        <ya-geo-object ya-source="ic.store.geoObject"
+                                       ya-options="{preset:'islands#blackStretchyIcon'}"></ya-geo-object>
+                    </ya-map>
+                </div>
                 <div class="button-container">
                     <button type="button" class="btn btn-primary btn-lg button-container"><span
                             class="glyphicon glyphicon-shopping-cart"></span> Добавить в корзину
@@ -57,7 +62,7 @@
     <div class="content-section">
         <h5>Похожие товары</h5>
         <div class="wrap-flex-container row row-extended">
-            <div class="col-xs-6 col-sm-3 col-md-2" ng-repeat="a in mc.getRange(6)">
+            <div class="col-xs-6 col-sm-3 col-md-2" ng-repeat="a in ic.getRange(6)">
                 <catalog-item-card></catalog-item-card>
             </div>
         </div>

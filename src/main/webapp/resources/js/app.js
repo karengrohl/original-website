@@ -3,7 +3,8 @@ var application = angular.module(
     [
         "ui.router",
         "ui.bootstrap",
-        'ngAnimate'
+        'ngAnimate',
+        'yaMap'
     ]
 );
 
@@ -43,7 +44,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/stores.html",
-                controller: MAIN_CONTROLLER
+                controller: "stores.controller as sc"
             }
         }
     };
@@ -93,7 +94,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/item.html",
-                controller: "item.controller as mc"
+                controller: "item.controller as ic"
             }
         }
     };

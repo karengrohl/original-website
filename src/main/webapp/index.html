@@ -19,8 +19,8 @@
     <script src="resources/libs/js/lodash/underscore-min.js"></script>
     <script src="resources/libs/js/angularjs/angular-animate.min.js"></script>
     <script src="resources/libs/js/angular-ui-bootstrap/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="resources/libs/js/ya-map/ya-map-2.1.min.js"></script>
     <!--config-->
     <script src="resources/js/app.js"></script>
     <!--directives-->
@@ -35,11 +35,15 @@
     <script src="resources/js/controllers/item/mapModal.controller.js"></script>
     <script src="resources/js/controllers/item/item.controller.js"></script>
     <script src="resources/js/controllers/store/store.controller.js"></script>
+    <script src="resources/js/controllers/stores.controller.js"></script>
+    <!--other stuff-->
+    <script src="resources/js/customMap.js"></script>
 
 </head>
 <body ng-app="original-store">
     <div ui-view="header" autoscroll="true"></div>
     <div ui-view="main" class="container main-content-wrapper" autoscroll="true"></div>
     <div ui-view="footer"></div>
+
 </body>
 </html>
