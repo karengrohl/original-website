@@ -23,11 +23,7 @@
             }
         };
 
-        mc.storeId = $stateParams.id;
 
-        mc.saleId = $stateParams.saleId;
-
-        console.log($stateParams);
 
         mc.getRange = function (n) {
             return _.range(0, n);

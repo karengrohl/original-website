@@ -227,7 +227,7 @@ ya-map {
     border: none;
 }
 
-.item-grid .catalog-item-card{
+.item-grid .catalog-item-card, .item-grid .sale-card {
     padding-bottom: 50px;
 }
 
@@ -254,8 +254,7 @@ uib-carousel {
 
 .gender-list .active {
     color: inherit;
-    border-bottom: 3px solid #777777;
-;
+    border-bottom: 3px solid #333;
 }
 
 .item-label {
@@ -279,4 +278,27 @@ uib-carousel {
 
 .deleted-price {
     margin-right: 1rem;
+}
+
+.sale-card {
+    color: #333;
+    text-decoration: none;
+}
+
+.sale-card-img {
+
+}
+
+.sale-card-description {
+    padding: 40px;
+}
+
+.sale-card .description-header {
+    padding-bottom: 3rem;
+}
+
+.sale-header-text {
+    display: block;
+    font-size: 5rem;
+
 }

@@ -5,6 +5,11 @@
     function controller($stateParams) {
         var ctrl = this;
 
+
+        ctrl.storeId = $stateParams.id;
+
+        ctrl.saleId = $stateParams.saleId;
+
         console.log($stateParams);
 
         ctrl.like = function () {

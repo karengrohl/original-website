@@ -49,12 +49,13 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var STORE_CONTROLLER = "store.controller as sc";
     var store = {
         url: "/stores/:id",
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/store.html",
-                controller: "store.controller as sc"
+                controller: STORE_CONTROLLER
             }
         }
     };
@@ -64,7 +65,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/store.html",
-                controller: MAIN_CONTROLLER
+                controller: STORE_CONTROLLER
             }
         }
     };

@@ -1,6 +1,19 @@
 <div>
 
     <div class="content-section">
-        <last-updates></last-updates>
+        <h1>Акции сегодня</h1>
+
+    </div>
+
+    <div class="content-section item-grid">
+
+        <div class="gender-list h3">
+            <a class="gender active">Женщинам</a>
+            <a class="gender">Мужчинам</a>
+            <a class="gender">Детям</a>
+        </div>
+        <a ui-sref="root.sale({id: 1, saleId: 1})" ng-repeat="a in mc.getRange(4)">
+            <sale-card></sale-card>
+        </a>
     </div>
 </div>
