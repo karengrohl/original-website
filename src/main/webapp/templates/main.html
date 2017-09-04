@@ -5,8 +5,8 @@
             <div>
                 <div uib-carousel active="0" interval="mc.carousel.interval">
                     <div uib-slide ng-repeat="slide in mc.carousel.slides track by slide.id" index="slide.id">
-                        <div class="wrap-flex-container row slide-content-block">
-                            <div class="col-xs-6 col-sm-6 col-md-3" ng-repeat="a in mc.getRange(4)">
+                        <div class="wrap-flex-container row slide-content-block ">
+                            <div class="col-xs-6 col-sm-6 col-md-3 text-left" ng-repeat="a in mc.getRange(4)">
                                 <catalog-item-card></catalog-item-card>
                             </div>
                         </div>
@@ -26,6 +26,18 @@
             <button type="button" class="btn btn-link btn-block">Меню</button>
         </div>
 
+
+        <div class="row hidden-sm hidden-xs">
+            <div class="col-md-offset-2 col-md-10 col-sm-12">
+                <div class="gender-list h3">
+
+                    <a class="gender active">Женщинам</a>
+                    <a class="gender">Мужчинам</a>
+                    <a class="gender">Детям</a>
+
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-2 hidden-sm hidden-xs">
                 <div>

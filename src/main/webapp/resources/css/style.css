@@ -230,3 +230,30 @@ ya-map {
 .item-grid .catalog-item-card{
     padding-bottom: 50px;
 }
+
+uib-carousel {
+    text-align: left;
+}
+
+.gender-list {
+    padding-bottom: 2rem;
+}
+
+.gender-list a{
+    color: #777777;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.gender-list a:hover {
+    color: inherit;
+}
+
+.gender-list .active {
+    color: inherit;
+    border-bottom: 3px solid #777777;
+;
+}
