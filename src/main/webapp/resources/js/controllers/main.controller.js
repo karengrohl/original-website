@@ -13,6 +13,16 @@
             interval: 5000
         };
 
+        mc.itemMenu = {
+            isCollapsed: true,
+            collapse: function () {
+                this.isCollapsed = true;
+            },
+            expand: function () {
+                this.isCollapsed = false;
+            }
+        };
+
         mc.storeId = $stateParams.id;
 
         mc.saleId = $stateParams.saleId;

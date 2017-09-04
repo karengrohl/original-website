@@ -1,10 +1,10 @@
 <div class="catalog-item-card">
     <p><a ui-sref="root.item({storeId: 1, itemId: 1})">
         <img src="files/800x1300.png" alt="..."
-             class="img-thumbnail img-responsive">
+             class="img-responsive">
     </a></p>
     <p class="product-card-price">20.00 р.</p>
-    <p class="product-card-discount-label">Размер</p>
+    <p class="product-card-discount-label"><small>M / <span class="text-muted">Описание товара</span></small></p>
     <p ng-if="!delete"><a ng-click="ic.addToCart(1)"><span class="glyphicon glyphicon-shopping-cart"></span> В
         корзину</a></p>
     <p ng-if="delete"><a class="text-success" ui-sref="root.cart">Перейти в корзину</a></p>

@@ -108,17 +108,12 @@ a[ng-click] {
 }
 
 .catalog-item-card {
-    padding: 15px;
+
 }
 
 .vote-buttons {
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-.row-extended {
-    margin-left: -30px;
-    margin-right: -30px;
 }
 
 .carousel-control {
@@ -223,3 +218,15 @@ ya-map {
     display: block;
 }
 
+.pagination {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.pagination>li>a {
+    border: none;
+}
+
+.item-grid .catalog-item-card{
+    padding-bottom: 50px;
+}
