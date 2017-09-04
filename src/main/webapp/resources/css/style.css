@@ -257,3 +257,26 @@ uib-carousel {
     border-bottom: 3px solid #777777;
 ;
 }
+
+.item-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.focus-color {
+    color: cornflowerblue;
+}
+
+.deleted-price {
+    margin-right: 1rem;
+}
