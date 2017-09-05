@@ -41,49 +41,11 @@
 
 
     <div class="content-section" ng-if="sc.saleId">
-
         <sale-card></sale-card>
-
     </div>
 
 
     <div class="content-section">
-        <div class="row">
-            <div class="col-md-2 hidden-sm hidden-xs">
-                <div>
-                    <side-menu></side-menu>
-                </div>
-            </div>
-            <div class="col-md-10 col-sm-12">
-                <div class="item-grid">
-                    <div class="wrap-flex-container row ">
-                        <div class="col-xs-6 col-sm-3" ng-repeat="a in sc.getRange(10)">
-                            <catalog-item-card></catalog-item-card>
-                        </div>
-                    </div>
-                    <nav aria-label="Page navigation">
-                        <div class="text-center">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li>
-                                    <a href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        <catalog></catalog>
     </div>
 </div>
