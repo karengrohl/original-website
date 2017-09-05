@@ -5,7 +5,13 @@
         return {
             restrict: "E",
             templateUrl: "templates/elements/catalog.html",
-            controller: "main.controller as mc"
+            controller: controller,
+            controllerAs: "mc"
         };
+    }
+
+    function controller() {
+        var ctrl = this;
+
     }
 })();

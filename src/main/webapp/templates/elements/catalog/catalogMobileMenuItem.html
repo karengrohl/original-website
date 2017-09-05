@@ -1,0 +1,13 @@
+<div class="menu-item">
+    <div class="menu-item-heading">
+        <button ng-click="mc.menuItem.change()" type="button" class="btn btn-link">
+            Мужская одежда <i class="pull-right glyphicon"
+                              ng-class="{'glyphicon-chevron-down': mc.menuItem.isOpen, 'glyphicon-chevron-right': !mc.menuItem.isOpen}"></i>
+        </button>
+    </div>
+    <div ng-show="mc.menuItem.isOpen">
+        <div class="menu-item-body" >
+            Some text here
+        </div>
+    </div>
+</div>

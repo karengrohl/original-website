@@ -1,0 +1,29 @@
+<div class="mobile-menu">
+    <div class="header-button clearfix">
+        <button ng-click="mm.mobileMenu.change('categories')" type="button" class="btn btn-link">Мужчинам
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mm.mobileMenu.categories.isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.categories.isOpen}"></i>
+        </button>
+        <button ng-click="mm.mobileMenu.change('filters')" type="button" class="btn btn-link pull-right">Фильтры
+            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.isOpen}"></i>
+        </button>
+    </div>
+
+    <div class="categories" ng-show="mm.mobileMenu.categories.isOpen">
+
+        <catalog-mobile-menu-item ng-repeat="item in mm.mobileMenu.categories.menuItems"></catalog-mobile-menu-item>
+
+    </div>
+
+    <div class="filters" ng-show="mm.mobileMenu.filters.isOpen">
+        <div class="menu-item">
+            <div class="menu-item-heading">
+                Цена <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.isOpen}"></i>
+            </div>
+            <div class="collapse">
+                <div class="menu-item-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cumque delectus dolore dolores, eius eum fuga in laborum magni perferendis quod rem temporibus veniam? At enim illum officia pariatur tenetur.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
