@@ -303,12 +303,24 @@ catalog-mobile-menu {
     display: block;
 }
 
+catalog-mobile-menu-item {
+    display: block;
+}
+
 catalog-mobile-menu .header-button, catalog-mobile-menu-item .menu-item-heading {
     margin-left: -12px;
     margin-right: -12px;
 }
 
 catalog-mobile-menu .menu-item {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    /*padding-top: 0.5rem;*/
+    /*padding-bottom: 0.5rem;*/
+}
+
+.menu-item-heading .btn {
+    text-align: left;
+}
+
+.menu-item-heading .btn-link:hover, .btn-link:focus {
+    text-decoration: none;
 }
