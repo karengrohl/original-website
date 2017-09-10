@@ -316,3 +316,11 @@ catalog-mobile-menu .menu-item {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 }
+
+.filters > div {
+    display: inline-block;
+}
+
+.popover {
+    max-width: none;
+}

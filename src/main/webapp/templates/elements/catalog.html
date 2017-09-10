@@ -1,7 +1,6 @@
 <div class="catalog">
 
 
-
     <div class="row">
         <div class="col-md-offset-2 col-md-10 col-sm-12">
             <div class="gender-list h3">
@@ -24,6 +23,43 @@
         </div>
         <div class="col-md-10 col-sm-12">
             <div class="content-section item-grid">
+                <div class="filters">
+                    <div class="">
+                        <ul class="list-inline list-unstyled">
+                            <li><span>Сортировать: </span></li>
+                            <li><select class="form-control input-sm">
+                                <option>По возрастанию цены</option>
+                                <option>По убыванию цены</option>
+                                <option>По новинкам</option>
+                                <option>По скидкам</option>
+                            </select></li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <ul class="list-inline list-unstyled">
+                            <li><span>Фильтры: </span></li>
+                            <li>
+                                <button popover-trigger="'outsideClick'" popover-placement="bottom"
+                                        uib-popover-template="cc.filters.price.popover.templateUrl" type="button"
+                                        class="btn btn-link">Цена
+                                </button>
+                            </li>
+                            <li>
+                                <button popover-trigger="'outsideClick'" popover-placement="bottom"
+                                        uib-popover-template="cc.filters.size.popover.templateUrl" type="button"
+                                        class="btn btn-link">Размер
+                                </button>
+                            </li>
+                            <li>
+                                <button popover-trigger="'outsideClick'" popover-placement="bottom"
+                                        uib-popover-template="cc.filters.brand.popover.templateUrl" type="button"
+                                        class="btn btn-link">Бренд
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <nav aria-label="Page navigation">
                     <div>
                         <ul class="pagination pagination-sm">
