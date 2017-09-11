@@ -307,7 +307,7 @@ catalog-mobile-menu-item {
     display: block;
 }
 
-catalog-mobile-menu .header-button, catalog-mobile-menu-item .menu-item-heading {
+catalog-mobile-menu .header-button, .menu-item-heading {
     margin-left: -12px;
     margin-right: -12px;
 }
@@ -331,4 +331,8 @@ catalog-mobile-menu .menu-item {
 
 .popover {
     max-width: none;
+}
+
+.sort {
+    margin-right: 2rem;
 }

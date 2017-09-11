@@ -17,17 +17,17 @@
         ctrl.filters = {
             price: {
                 popover: {
-                    templateUrl: "templates/elements/catalog/filters/price.html"
+                    templateUrl: "templates/elements/catalog/filters/priceTooltip.html"
                 }
             },
             size: {
                 popover: {
-                    templateUrl: "templates/elements/catalog/filters/size.html"
+                    templateUrl: "templates/elements/catalog/filters/sizeTooltip.html"
                 }
             },
             brand: {
                 popover: {
-                    templateUrl: "templates/elements/catalog/filters/brand.html"
+                    templateUrl: "templates/elements/catalog/filters/brandTooltip.html"
                 }
             }
         }

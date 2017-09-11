@@ -9,19 +9,49 @@
     </div>
 
     <div class="categories" ng-show="mm.mobileMenu.categories.isOpen">
-
         <catalog-mobile-menu-item ng-repeat="item in mm.mobileMenu.categories.menuItems"></catalog-mobile-menu-item>
-
     </div>
 
-    <div class="filters" ng-show="mm.mobileMenu.filters.isOpen">
+    <div ng-show="mm.mobileMenu.filters.isOpen">
         <div class="menu-item">
             <div class="menu-item-heading">
-                Цена <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.isOpen}"></i>
+                <button ng-click="mm.mobileMenu.filters.menuItems[0].change()" type="button"
+                        class="btn btn-link btn-block">
+                    Цена<i class="pull-right glyphicon"
+                           ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.menuItems[0].isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.menuItems[0].isOpen}"></i>
+                </button>
             </div>
-            <div class="collapse">
+            <div ng-show="mm.mobileMenu.filters.menuItems[0].isOpen">
                 <div class="menu-item-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cumque delectus dolore dolores, eius eum fuga in laborum magni perferendis quod rem temporibus veniam? At enim illum officia pariatur tenetur.
+                    <price-filter></price-filter>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-heading">
+                <button ng-click="mm.mobileMenu.filters.menuItems[1].change()" type="button"
+                        class="btn btn-link btn-block">
+                    Размер<i class="pull-right glyphicon"
+                             ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.menuItems[1].isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.menuItems[1].isOpen}"></i>
+                </button>
+            </div>
+            <div ng-show="mm.mobileMenu.filters.menuItems[1].isOpen">
+                <div class="menu-item-body">
+                    <size-filter></size-filter>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-heading">
+                <button ng-click="mm.mobileMenu.filters.menuItems[2].change()" type="button"
+                        class="btn btn-link btn-block">
+                    Бренд<i class="pull-right glyphicon"
+                            ng-class="{'glyphicon-chevron-down': mm.mobileMenu.filters.menuItems[2].isOpen, 'glyphicon-chevron-right': !mm.mobileMenu.filters.menuItems[2].isOpen}"></i>
+                </button>
+            </div>
+            <div ng-show="mm.mobileMenu.filters.menuItems[2].isOpen">
+                <div class="menu-item-body">
+                    <brand-filter></brand-filter>
                 </div>
             </div>
         </div>
