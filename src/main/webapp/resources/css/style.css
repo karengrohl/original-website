@@ -223,7 +223,7 @@ ya-map {
     border: none;
 }
 
-.item-grid .catalog-item-card, .item-grid .sale-card {
+.item-grid .catalog-item-card {
     padding-bottom: 50px;
 }
 
@@ -285,10 +285,6 @@ uib-carousel {
 
 }
 
-.sale-card-description {
-    padding: 40px;
-}
-
 .sale-card .description-header {
     padding-bottom: 3rem;
 }
@@ -335,4 +331,17 @@ catalog-mobile-menu .menu-item {
 
 .sort {
     margin-right: 2rem;
+}
+
+.filter-submit-button {
+    margin-bottom: 0;
+}
+
+.news-extended-row {
+    margin-left: -4rem;
+    margin-right: -4rem;
+}
+
+.news-extended-row .sale-card {
+    padding: 2.5rem;
 }
