@@ -11,8 +11,10 @@
         };
     }
 
-    function controller() {
+    function controller($rootScope) {
         var ctrl = this;
-
+        ctrl.change = function (gender) {
+            $rootScope.gender.change(gender);
+        }
     }
 })();
