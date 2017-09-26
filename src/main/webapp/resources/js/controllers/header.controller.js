@@ -28,8 +28,9 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: "templates/login.html",
-                controller: "main.controller",
+                controller: "loginModal.controller",
                 controllerAs: "mc",
+                size: "sm",
                 resolve: {}
             });
         }

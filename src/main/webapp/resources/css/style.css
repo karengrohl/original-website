@@ -276,7 +276,7 @@ uib-carousel {
     margin-right: 1rem;
 }
 
-.sale-card {
+.sale-card a, .sale-card a:hover {
     color: #333;
     text-decoration: none;
 }
@@ -345,3 +345,32 @@ catalog-mobile-menu .menu-item {
 .news-extended-row .sale-card {
     padding: 2.5rem;
 }
+
+.vk-color-background {
+    background-color: #4d7198;
+}
+
+.login-buttons .vk-color-background:hover {
+    background-color: #344C66;
+}
+
+.google-color-background {
+    background-color: #D84B37;
+}
+
+.login-buttons .google-color-background:hover {
+    background-color: #a6392b;
+}
+
+.facebook-color-background {
+    background-color: #3b5998;
+}
+
+.login-buttons .facebook-color-background:hover {
+    background-color: #273B66;
+}
+
+.login-buttons .btn, .login-buttons .btn:hover, .login-buttons .btn:focus, .login-buttons .btn:active {
+    color: white;
+}
+
