@@ -374,3 +374,14 @@ catalog-mobile-menu .menu-item {
     color: white;
 }
 
+.profile-properties .control-label {
+    width: auto;
+}
+
+.profile-nav {
+    padding-bottom: 3rem;
+}
+
+.login-buttons {
+    padding-bottom: 2rem;
+}
