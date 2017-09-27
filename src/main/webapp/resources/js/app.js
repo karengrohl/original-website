@@ -105,7 +105,7 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         views: {
             "main@": {
                 templateUrl: TEMPLATE_FOLDER + "/profile.html",
-                controller: MAIN_CONTROLLER
+                controller: "profile as ctrl"
             }
         }
 
