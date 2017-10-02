@@ -8,7 +8,13 @@
                        ng-disabled="ctrl.fields.phone.disabled"
                        class="form-control"
                        id="inputEmail3"
-                       placeholder="+375 00 000-00-00">
+                       placeholder="+375 00 000-00-00"
+                       ui-mask="+(999) 99 999-99-99"
+                       value="+(375)"
+                       ui-mask-placeholder
+                       ui-mask-placeholder-char="_"
+                       ui-options="{clearOnBlur: false}">
+
                 <span class="input-group-btn">
                     <button class="btn btn-default" ng-if="ctrl.fields.phone.disabled"
                             ng-click="ctrl.fields.phone.editState()"

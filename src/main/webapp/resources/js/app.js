@@ -4,7 +4,8 @@ var application = angular.module(
         "ui.router",
         "ui.bootstrap",
         'ngAnimate',
-        'yaMap'
+        'yaMap',
+        'ui.mask'
     ]
 );
 
@@ -12,7 +13,10 @@ application.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
 
     var TEMPLATE_FOLDER = "templates";
-    var ADMIN_FOLDER = "/user";
+    var STORE_CONTROLLER = "store.controller as sc";
+    var PROFILE_FOLDER = "/profile";
+    var MAIN_CONTROLLER = "main.controller as mc";
+    var ROOT = "root";
 
     var root = {
         abstract: true,
@@ -27,7 +31,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-    var MAIN_CONTROLLER = "main.controller as mc";
     var main = {
         url: "/",
         views: {
@@ -37,7 +40,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     };
-
     var stores = {
         url: "/stores",
         views: {
@@ -48,7 +50,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-    var STORE_CONTROLLER = "store.controller as sc";
     var store = {
         url: "/stores/:id",
         views: {
@@ -99,7 +100,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-    var PROFILE_FOLDER = "/profile";
     var user = {
         abstract: true,
         url: "/user",
@@ -130,11 +130,6 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
-
-
-
-
-    var ROOT = "root";
     $stateProvider
         .state(ROOT, root)
         .state("root.main", main)
@@ -148,5 +143,4 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         .state("root.user", user)
         .state("root.user.settings", userSettings)
         .state("root.user.orders", userOrders);
-
 });
