@@ -99,17 +99,39 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var PROFILE_FOLDER = "/profile";
     var user = {
-
+        abstract: true,
         url: "/user",
         views: {
             "main@": {
-                templateUrl: TEMPLATE_FOLDER + "/profile.html",
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + "/profile.html",
                 controller: "profile as ctrl"
             }
         }
 
     };
+
+    var userSettings = {
+        url: "",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + "/settings.html"
+            }
+        }
+    };
+
+    var userOrders = {
+        url: "",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + "/orders.html"
+            }
+        }
+    };
+
+
+
 
 
     var ROOT = "root";
@@ -123,6 +145,8 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         //maybe make root.store.sale and root.store.item
         .state("root.sale", sale)
         .state("root.item", item)
-        .state("root.user", user);
+        .state("root.user", user)
+        .state("root.user.settings", userSettings)
+        .state("root.user.orders", userOrders);
 
 });
