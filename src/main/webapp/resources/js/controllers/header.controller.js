@@ -8,12 +8,21 @@
 
         $rootScope.authorization = {
             authorized: false,
-            authorize: function () {
+
+            /*
+            TODO role only for mocking purpose, should be deleted and added after server response
+            for ex:
+            let principal = serverService.authorize(name, pass);
+            this.role = principal.role;*/
+            authorize: function (role) {
                 this.authorized = true;
+                this.role = role;
             },
             logout: function () {
                 this.authorized = false;
-            }
+                this.role = undefined;
+            },
+            role: undefined
         };
 
         $rootScope.gender = {
@@ -46,6 +55,8 @@
 
         var ctrl = this;
 
+        initRootScope($rootScope);
+
         ctrl.navbar = {
             isCollapsed: true,
             collapse: function () {
@@ -60,8 +71,13 @@
             $state.go(state, params);
         };
 
-
-        initRootScope($rootScope);
+        ctrl.openProfilePage = function () {
+            if ($rootScope.authorization.role = "user") {
+                ctrl.changeState('root.user.settings');
+            } else if ($rootScope.authorization.role = "store"){
+                ctrl.changeState('root.admin.settings');
+            }
+        };
 
         ctrl.openLoginDialog = function () {
             $uibModal.open({

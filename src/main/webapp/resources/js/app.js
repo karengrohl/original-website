@@ -130,6 +130,18 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         }
     };
 
+    var ADMIN_FOLDER = "/admin";
+    var admin = {
+        abstract: true,
+        url: "/admin",
+        views: {
+            "main@": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + ADMIN_FOLDER + "/admin.html",
+                controller: "profile as ctrl"
+            }
+        }
+    }
+
     $stateProvider
         .state(ROOT, root)
         .state("root.main", main)

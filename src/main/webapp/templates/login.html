@@ -2,27 +2,42 @@
     <div class="modal-header">
         Войти или зарегистрироваться
         <button type="button" ng-click="mc.close()" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-
+                aria-hidden="true">&times;</span>
+        </button>
     </div>
     <div class="modal-body" id="modal-body">
         <div class="login-buttons">
-            <button ng-click="mc.login()" type="button" class="btn btn-lg btn-block vk-color-background"><i
-                    class="fa fa-vk"
-                    aria-hidden="true"></i> ВКонтакте
-            </button>
-            <button ng-click="mc.login()" type="button" class="btn btn-lg btn-block facebook-color-background"><i
-                    class="fa fa-facebook"
-                    aria-hidden="true"></i>
-                Facebook
-            </button>
-            <button ng-click="mc.login()" type="button" class="btn btn-lg btn-block google-color-background"><i
-                    class="fa fa-google"
-                    aria-hidden="true"></i> Google
-            </button>
+            <div ng-if="mc.isUserLogin" id="userLoginButtons">
+                <button ng-click="mc.login('user')" type="button" class="btn btn-lg btn-block vk-color-background">
+                    <i class="fa fa-vk" aria-hidden="true"></i>
+                    ВКонтакте
+                </button>
+                <button ng-click="mc.login('user')" type="button" class="btn btn-lg btn-block facebook-color-background">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    Facebook
+                </button>
+                <button ng-click="mc.login('user')" type="button" class="btn btn-lg btn-block google-color-background">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    Google
+                </button>
+            </div>
+            <div ng-if="!mc.isUserLogin">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Пароль</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+                </div>
+                <button ng-click="mc.login('admin')" type="submit" class="btn btn-primary btn-block">Вход</button>
+            </div>
         </div>
-        <a class="btn btn-link btn-block" ui-sref="">
+        <a ng-if="mc.isUserLogin" ng-click="mc.toggleLoginScreenByRole()" class="btn btn-link btn-block">
             <small>Вход для администраторов</small>
+        </a>
+        <a ng-if="!mc.isUserLogin" ng-click="mc.toggleLoginScreenByRole()" class="btn btn-link btn-block">
+            <small>Вход для пользователей</small>
         </a>
     </div>
 </div>

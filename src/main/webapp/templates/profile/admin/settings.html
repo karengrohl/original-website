@@ -1,0 +1,92 @@
+<div class="form-horizontal">
+
+    <!--Photo-->
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Фото</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="files/500x500.png" alt="..."
+                             class="img-responsive img-circle">
+                    </div>
+                </div>
+
+
+
+                <!--<input type="tel"-->
+                       <!--ng-model="ctrl.fields.name.value"-->
+                       <!--ng-disabled="ctrl.fields.name.disabled"-->
+                       <!--class="form-control"-->
+                       <!--id="inputEmail3"-->
+                       <!--placeholder="Иван Петров">-->
+                <!--<span class="input-group-btn">-->
+                    <!--<button class="btn btn-default" ng-if="ctrl.fields.name.disabled"-->
+                            <!--ng-click="ctrl.fields.name.editState()"-->
+                            <!--type="button">Изменить</button>-->
+                    <!--<button ng-if="!ctrl.fields.name.disabled" class="btn btn-primary"-->
+                            <!--ng-click="ctrl.fields.name.save()"-->
+                            <!--type="button">Сохранить</button>-->
+                    <!--<button ng-if="!ctrl.fields.name.disabled" class="btn btn-default"-->
+                            <!--ng-click="ctrl.fields.name.reset()"-->
+                            <!--type="button">Отмена</button>-->
+                <!--</span>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Телефон</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                <input type="tel"
+                       ng-model="ctrl.fields.phone.value"
+                       ng-disabled="ctrl.fields.phone.disabled"
+                       class="form-control"
+                       id="inputEmail3"
+                       placeholder="+375 00 000-00-00"
+                       ui-mask="+(999) 99 999-99-99"
+                       value="+(375)"
+                       ui-mask-placeholder
+                       ui-mask-placeholder-char="_"
+                       ui-options="{clearOnBlur: false}">
+
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-if="ctrl.fields.phone.disabled"
+                            ng-click="ctrl.fields.phone.editState()"
+                            type="button">Изменить</button>
+                    <button ng-if="!ctrl.fields.phone.disabled" class="btn btn-primary"
+                            ng-click="ctrl.fields.phone.save()"
+                            type="button">Сохранить</button>
+                    <button ng-if="!ctrl.fields.phone.disabled" class="btn btn-default"
+                            ng-click="ctrl.fields.phone.reset()"
+                            type="button">Отмена</button>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Имя</label>
+        <div class="col-sm-10">
+            <div class="input-group">
+                <input type="tel"
+                       ng-model="ctrl.fields.name.value"
+                       ng-disabled="ctrl.fields.name.disabled"
+                       class="form-control"
+                       id="inputEmail3"
+                       placeholder="Иван Петров">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-if="ctrl.fields.name.disabled"
+                            ng-click="ctrl.fields.name.editState()"
+                            type="button">Изменить</button>
+                    <button ng-if="!ctrl.fields.name.disabled" class="btn btn-primary"
+                            ng-click="ctrl.fields.name.save()"
+                            type="button">Сохранить</button>
+                    <button ng-if="!ctrl.fields.name.disabled" class="btn btn-default"
+                            ng-click="ctrl.fields.name.reset()"
+                            type="button">Отмена</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
