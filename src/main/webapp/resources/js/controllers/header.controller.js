@@ -72,9 +72,9 @@
         };
 
         ctrl.openProfilePage = function () {
-            if ($rootScope.authorization.role = "user") {
+            if ($rootScope.authorization.role === "user") {
                 ctrl.changeState('root.user.settings');
-            } else if ($rootScope.authorization.role = "store"){
+            } else if ($rootScope.authorization.role === "admin") {
                 ctrl.changeState('root.admin.settings');
             }
         };

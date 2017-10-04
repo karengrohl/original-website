@@ -9,6 +9,10 @@ var application = angular.module(
     ]
 );
 
+application.run(function ($rootScope) {
+    $rootScope.$on("$stateChangeError", console.log.bind(console));
+});
+
 application.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
 
@@ -140,7 +144,43 @@ application.config(function ($stateProvider, $urlRouterProvider) {
                 controller: "profile as ctrl"
             }
         }
-    }
+    };
+
+    var storeSettings = {
+        url: "/store/settings",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + ADMIN_FOLDER + "/settings.html"
+            }
+        }
+    };
+
+    var storeCatalog = {
+        url: "/store/catalog",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + ADMIN_FOLDER + "/catalog.html"
+            }
+        }
+    };
+
+    var storeSales = {
+        url: "/store/sales",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + ADMIN_FOLDER + "/sales.html"
+            }
+        }
+    };
+
+    var storeOrders = {
+        url: "/store/orders",
+        views: {
+            "": {
+                templateUrl: TEMPLATE_FOLDER + PROFILE_FOLDER + ADMIN_FOLDER + "/orders.html"
+            }
+        }
+    };
 
     $stateProvider
         .state(ROOT, root)
@@ -154,5 +194,10 @@ application.config(function ($stateProvider, $urlRouterProvider) {
         .state("root.item", item)
         .state("root.user", user)
         .state("root.user.settings", userSettings)
-        .state("root.user.orders", userOrders);
+        .state("root.user.orders", userOrders)
+        .state("root.admin", admin)
+        .state("root.admin.settings", storeSettings)
+        .state("root.admin.catalog", storeCatalog)
+        .state("root.admin.sales", storeSales)
+        .state("root.admin.orders", storeOrders);
 });

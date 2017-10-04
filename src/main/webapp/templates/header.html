@@ -17,12 +17,10 @@
                 <li><a ng-click="hc.changeState('root.news')">Новости</a></li>
                 <li><a ng-click="hc.changeState('root.stores')">Магазины</a></li>
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
                 <li><a ng-click="hc.changeState('root.cart')">Корзина <span class="badge">{{cartCount}}</span></a></li>
                 <li><a ng-click="hc.openLoginDialog()" ng-show="!$root.authorization.authorized">Вход</a></li>
-                <li><a ng-click="hc.openProfilePage()" ng-show="$root.authorization.authorized;">Личный
-                    кабинет</a></li>
+                <li><a ng-click="hc.openProfilePage()" ng-show="$root.authorization.authorized;">Личный кабинет</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
