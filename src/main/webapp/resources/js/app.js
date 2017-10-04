@@ -5,12 +5,14 @@ var application = angular.module(
         "ui.bootstrap",
         'ngAnimate',
         'yaMap',
-        'ui.mask'
+        'ui.mask',
+        "xeditable"
     ]
 );
 
-application.run(function ($rootScope) {
+application.run(function ($rootScope, editableOptions) {
     $rootScope.$on("$stateChangeError", console.log.bind(console));
+    editableOptions.theme = 'bs3';
 });
 
 application.config(function ($stateProvider, $urlRouterProvider) {
